@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <style>
+        body{font-family:"Helvetica Neue", Helvetica, 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace, sans-serif;font-size:18px}
+        [class*=btn_srv]{display:inline-block;width:15px;height:15px;border-radius:10px;font-size:0;line-height:28px}
+        .btn_srv_on{background-color:#1fbc02}
+        .btn_srv_off{background-color:#f00}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <span class="srv_tit">(C) GMAN's www </span>
+        <div class="srv_current">
+            <span>status : </span>
+            <span class="srv_status">checking...</span>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script>
+        var req = function () {
+            $.ajax({
+                url : 'http://go.gman.io',
+                complete : function (jqXHR, statusText) {
+                    if(statusText === 'success'){
+                        $('.srv_status').removeClass('btn_srv_off');
+                        $('.srv_status').addClass('btn_srv_on');
+                    }else{
+                        $('.srv_status').removeClass('btn_srv_on');
+                        $('.srv_status').addClass('btn_srv_off');
+                    }
+                    setTimeout(function () {
+                        req();
+                    }, 1000);
+                }
+            });
+        };
+        req();
+
+    </script>
+</body>
+</html>
