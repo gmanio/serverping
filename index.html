@@ -6,26 +6,33 @@
     <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <style>
         html, body{margin:0;padding:0;font-family:"Helvetica Neue", Helvetica, 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace, sans-serif;font-size:18px}
-        [class*=btn_srv]{display:inline-block;width:20px;height:20px;border:2px solid #eee;border-radius:15px;font-size:0;line-height:28px}
+        [class*=btn_srv]{display:inline-block;width:16px;height:16px;border:2px solid #eee;border-radius:15px;font-size:0;line-height:28px}
         .btn_srv_on{background-color:#1fbc02}
         .btn_srv_off{background-color:#f00}
         .srv_tit{padding:0 10px}
-	    .srv_current_status{overflow:hidden;padding:0 10px}
-	    .srv_status_tit{float:left;display:inline-block}
-	    .srv_status_ico{float:left;margin-left:20px}
+	    .srv_current_status{padding:0 5px}
+	    .srv_status_tit{}
+	    .srv_status_ico{margin-left:20px}
+        header{margin:0;text-align: center}
+        section.content{overflow:hidden;text-align: center}
     </style>
 </head>
 <body>
     <div id="wrap">
-        <h1 class="srv_tit">Server</h1>
-        <div class="srv_current_status">
-            <span class="srv_status_tit">[ current status ] </span>
-            <span class="srv_status_ico">checking...</span>
-        </div>
-	    <br/>
-	    <canvas id="gCanvas" width="400" height="100" alt="Display for segment" style="border:1px solid #eee;background-color:#fff">
-		    This text is displayed if your browser does not support HTML5 Canvas.
-	    </canvas>
+        <header>
+            <h1 class="srv_tit">Server</h1>
+            <img src="img/mars.png" width="480" height="480" alt="opportunity">
+        </header>
+        <section class="content">
+            <div class="srv_current_status">
+                <span class="srv_status_tit">[ server status ] </span>
+                <span class="srv_status_ico">checking...</span>
+            </div>
+            <br/>
+            <canvas id="gCanvas" width="400" height="100" alt="Display for segment" style="border:1px solid #eee;background-color:#fff">
+                This text is displayed if your browser does not support HTML5 Canvas.
+            </canvas>
+        </section>
     </div>
   
     <script>
@@ -55,7 +62,7 @@
                     setTimeout(function () {
                         req();
                     }, 1000);
-                }
+                },
             });
         };
         req();
