@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
     <style>
-        html, body{margin:0;padding:0;font-family:"Helvetica Neue", Helvetica, 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace, sans-serif;font-size:18px}
+        html, body{overflow:hidden;width:100%;height:100%;margin:0;padding:0;font-family:"Helvetica Neue", Helvetica, 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace, sans-serif;font-size:18px}
+        /* Wrapper */
+        div#wrap{color: #ffffff}
         [class*=btn_srv]{display:inline-block;width:16px;height:16px;border:2px solid #eee;border-radius:15px;font-size:0;line-height:28px}
         .btn_srv_on{background-color:#1fbc02}
         .btn_srv_off{background-color:#f00}
@@ -15,9 +17,11 @@
 	    .srv_status_ico{margin-left:20px}
         header{margin:0;text-align: center}
         section.content{overflow:hidden;text-align: center}
+        .bg_mars{display:block;width:100%;height:100%;position:absolute;z-index:-1;background-image:url("img/bg_matrix.png");background-size:cover;-webkit-filter:blur(3px);-moz-filter:blur(3px);-o-filter:blur(3px);-ms-filter:blur(3px);flter:blur(3px)}
     </style>
 </head>
 <body>
+    <div class="bg_mars"></div>
     <div id="wrap">
         <header>
             <h1 class="srv_tit">Server</h1>
@@ -50,7 +54,7 @@
 
         var req = function () {
             $.ajax({
-                url : 'http://go.gman.io',
+                url : 'http://go.gman.io:7777',
                 complete : function (jqXHR, statusText) {
                     if(statusText === 'success'){
                         $('.srv_status_ico').removeClass('btn_srv_off');
@@ -62,7 +66,7 @@
                     setTimeout(function () {
                         req();
                     }, 1000);
-                },
+                }
             });
         };
         req();
