@@ -1,65 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>gman.io :: status</title>
+    <title>Server for Mr.Park</title>
+    <meta name="description" content="he's name => park:박,ji:지,man:만">
+    <meta name="robots" content="index,follow">
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-59800730-1', 'auto');
+        ga('send', 'pageview');
+    </script>
     <style>
-        html, body{overflow:hidden;width:100%;height:100%;margin:0;padding:0;font-family:"Helvetica Neue", Helvetica, 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace, sans-serif;font-size:18px}
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', 'helvetica', 'sans-serif';
+            font-size: 18px
+        }
+
         /* Wrapper */
-        div#wrap{color: #ffffff}
-        [class*=btn_srv]{display:inline-block;width:16px;height:16px;border:2px solid #eee;border-radius:15px;font-size:0;line-height:28px}
-        .btn_srv_on{background-color:#1fbc02}
-        .btn_srv_off{background-color:#f00}
-        .srv_tit{padding:0 10px}
-	    .srv_current_status{padding:0 5px}
-	    .srv_status_tit{}
-	    .srv_status_ico{margin-left:20px}
-        header{margin:0;text-align: center}
-        section.content{overflow:hidden;margin-top:30px;text-align: center}
-        .bg_mars{display:block;width:100%;height:100%;position:absolute;z-index:-1;background-image:url("img/bg_matrix.png");background-size:cover;-webkit-filter:blur(3px);-moz-filter:blur(3px);-o-filter:blur(3px);-ms-filter:blur(3px);flter:blur(3px)}
+        div#wrap {
+            color: #ffffff
+        }
+
+        [class*=btn_srv] {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #eee;
+            border-radius: 15px;
+            font-size: 0;
+            line-height: 28px
+        }
+
+        .btn_srv_on {
+            background-color: #1fbc02
+        }
+
+        .btn_srv_off {
+            background-color: #f00
+        }
+
+        .srv_tit {
+            padding: 0 10px
+        }
+
+        .srv_current_status {
+            padding: 0 5px
+        }
+
+        .srv_status_ico {
+            margin-left: 20px
+        }
+
+        header {
+            margin: 0;
+            text-align: center
+        }
+
+        section.content {
+            overflow: hidden;
+            margin-top: 30px;
+            text-align: center
+        }
+
+        .bg_matrix {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            background-image: url("img/bg_matrix.png");
+            background-size: cover;
+            -webkit-filter: blur(4px);
+            -moz-filter: blur(4px);
+            -o-filter: blur(4px);
+            -ms-filter: blur(4px);
+            flter: blur(4px)
+        }
     </style>
 </head>
 <body>
-    <div class="bg_mars"></div>
-    <div id="wrap">
-        <header>
-            <h1 class="srv_tit">Server</h1>
-            <img src="img/mars.png" width="480" height="480" alt="opportunity">
-        </header>
-        <section class="content">
-            <div class="srv_current_status">
-                <span class="srv_status_tit">[ server status ] </span>
-                <span class="srv_status_ico">checking...</span>
-            </div>
-            <br/>
-            <canvas id="gCanvas" width="400" height="100" alt="Display for segment" style="border:1px solid #eee;background-color:#fff">
-                This text is displayed if your browser does not support HTML5 Canvas.
-            </canvas>
-        </section>
-    </div>
-  
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-59800730-1', 'auto');
-    ga('send', 'pageview');
-    </script>
-    <script src="js/gSegment.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-
+<div class="bg_matrix"></div>
+<div id="wrap">
+    <header>
+        <h1 class="srv_tit">Server</h1>
+        <img src="img/mars.png" width="480" height="480" name="walle" alt="walle">
+    </header>
+    <section class="content">
+        <div class="srv_current_status">
+            <span class="srv_status_tit">[ server status ] </span>
+            <span class="srv_status_ico">checking...</span>
+        </div>
+        <br/>
+        <canvas id="gCanvas" width="400" height="100" alt="Display for segment"
+                style="border:1px solid #eee;background-color:#fff">
+            This text is displayed if your browser does not support HTML5 Canvas.
+        </canvas>
+    </section>
+</div>
+<script src="js/gSegment.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    (function () {
         var req = function () {
             $.ajax({
-                url : 'http://go.gman.io',
-                complete : function (jqXHR, statusText) {
-                    if(statusText === 'success'){
+                url: 'http://go.gman.io',
+                complete: function (jqXHR, statusText) {
+                    if (statusText === 'success') {
                         $('.srv_status_ico').removeClass('btn_srv_off');
                         $('.srv_status_ico').addClass('btn_srv_on');
-                    }else{
+                    } else {
                         $('.srv_status_ico').removeClass('btn_srv_on');
                         $('.srv_status_ico').addClass('btn_srv_off');
                     }
@@ -69,31 +135,33 @@
                 }
             });
         };
+
         req();
 
-        window.onload = function() {
-	        /**
-	         *  segment의 경우 각각의 인스턴스를 생성하여 사용
-	         * */
-	        var aSegment = [
-		        new gSegment('gCanvas', 0, 0),
-		        new gSegment('gCanvas', 60, 0),
-		        new gSegment('gCanvas', 140, 0),
-		        new gSegment('gCanvas', 200, 0),
-		        new gSegment('gCanvas', 280, 0),
-		        new gSegment('gCanvas', 340, 0)
-	        ]
+        window.onload = function () {
+            /**
+             *  segment의 경우 각각의 인스턴스를 생성하여 사용
+             * */
+            var aSegment = [
+                new gSegment('gCanvas', 0, 0),
+                new gSegment('gCanvas', 60, 0),
+                new gSegment('gCanvas', 140, 0),
+                new gSegment('gCanvas', 200, 0),
+                new gSegment('gCanvas', 280, 0),
+                new gSegment('gCanvas', 340, 0)
+            ]
 
-	        var clock = setInterval(function(){
-		        var currentTime = new Date();
-		        aSegment[0].drawNumber(Math.floor(currentTime.getHours()/10));
-		        aSegment[1].drawNumber(currentTime.getHours()%10);
-		        aSegment[2].drawNumber(Math.floor(currentTime.getMinutes()/10));
-		        aSegment[3].drawNumber(currentTime.getMinutes()%10);
-		        aSegment[4].drawNumber(Math.floor(currentTime.getSeconds()/10));
-		        aSegment[5].drawNumber(currentTime.getSeconds()%10);
-	        },1000);
+            var clock = setInterval(function () {
+                var currentTime = new Date();
+                aSegment[0].drawNumber(Math.floor(currentTime.getHours() / 10));
+                aSegment[1].drawNumber(currentTime.getHours() % 10);
+                aSegment[2].drawNumber(Math.floor(currentTime.getMinutes() / 10));
+                aSegment[3].drawNumber(currentTime.getMinutes() % 10);
+                aSegment[4].drawNumber(Math.floor(currentTime.getSeconds() / 10));
+                aSegment[5].drawNumber(currentTime.getSeconds() % 10);
+            }, 1000);
         }
-    </script>
+    })();
+</script>
 </body>
 </html>
