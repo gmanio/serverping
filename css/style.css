@@ -81,6 +81,7 @@ div#wrap {
 }
 
 .srv_tit {
+    margin-bottom:20px;
     padding: 0 10px
 }
 
@@ -109,7 +110,7 @@ section.content {
     height: 100%;
     position: absolute;
     z-index: -1;
-    background-image: url("img/bg_matrix.png");
+    background: url("../img/bg_matrix.png");
     background-size: cover;
     -webkit-filter: blur(4px);
     -moz-filter: blur(4px);
@@ -117,3 +118,5 @@ section.content {
     -ms-filter: blur(4px);
     flter: blur(4px)
 }
+
+.today{margin:20px 0;font-size:21px;line-height:23px;color:#fff;text-align:center}
