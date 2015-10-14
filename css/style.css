@@ -1,0 +1,119 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html, body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', 'helvetica', 'sans-serif';
+    font-size: 18px
+}
+
+/* Wrapper */
+div#wrap {
+    color: #ffffff
+}
+
+[class*=btn_srv] {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    font-size: 0;
+    line-height: 28px
+}
+
+.btn_srv_on {
+    background-color: #1fbc02
+}
+
+.btn_srv_off {
+    background-color: #f00
+}
+
+.srv_tit {
+    padding: 0 10px
+}
+
+.srv_current_status {
+    padding: 0 5px
+}
+
+.srv_status_ico {
+    margin-left: 20px
+}
+
+header {
+    margin: 0;
+    text-align: center
+}
+
+section.content {
+    overflow: hidden;
+    margin-top: 30px;
+    text-align: center
+}
+
+.bg_matrix {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-image: url("img/bg_matrix.png");
+    background-size: cover;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    flter: blur(4px)
+}
